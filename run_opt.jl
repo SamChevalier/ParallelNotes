@@ -36,7 +36,7 @@ end
 An = [randn(500,500) for ii in 1:num_problems]
 bn = [randn(500) for ii in 1:num_problems]
 
-obj_vals = solve_opts(Mn,An,bn; serial=true)
+#obj_vals = solve_opts(Mn,An,bn; serial=true)
 
 LinearAlgebra.BLAS.set_num_threads(1)
 obj_vals = solve_opts(Mn,An,bn; serial=false)
